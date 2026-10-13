@@ -1,0 +1,443 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>XSTweaks | Optimize Beyond Limits</title>
+
+<meta name="description" content="XSTweaks — Fortnite optimization, PC performance guides, and gaming tools.">
+
+<style>
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{background:#080808;color:#f5f5f5;font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+
+a{color:inherit;text-decoration:none}
+
+header{height:75px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #292929;background:#080808;position:sticky;top:0;z-index:10}
+
+.logo{font-size:25px;font-weight:900;letter-spacing:-2px}
+
+.logo span{font-size:11px;letter-spacing:3px;margin-left:8px}
+
+nav{display:flex;gap:22px;font-size:12px;color:#bbb}
+
+nav a:hover{color:white}
+
+.btn{display:inline-block;padding:12px 20px;border:1px solid #555;border-radius:5px;font-size:12px;font-weight:bold;transition:.2s}
+
+.btn:hover{border-color:white;transform:translateY(-2px)}
+
+.white{background:white;color:black;border-color:white}
+
+section{padding:75px 7%}
+
+.hero{min-height:550px;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 78% 45%,#292929,#101010 40%,#080808 72%)}
+
+.hero:after{content:"XS";position:absolute;right:5%;font-size:clamp(220px,34vw,430px);font-weight:900;letter-spacing:-35px;color:transparent;-webkit-text-stroke:1px #333}
+
+.hero-content{max-width:570px;position:relative;z-index:1}
+
+.eyebrow{font-size:10px;letter-spacing:3px;color:#aaa;font-weight:bold;margin-bottom:18px}
+
+h1{font-size:clamp(48px,6vw,76px);line-height:1;letter-spacing:-4px;margin-bottom:23px}
+
+h1 span{color:#888}
+
+.hero p{color:#bbb;font-size:14px;max-width:470px}
+
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+
+.stats{display:flex;gap:30px;margin-top:40px}
+
+.stats strong{display:block;font-size:22px}
+
+.stats small{font-size:10px;color:#999}
+
+.features{display:grid;grid-template-columns:repeat(5,1fr);gap:25px;border-block:1px solid #292929;padding-top:35px;padding-bottom:35px;background:#0c0c0c}
+
+.feature-icon{font-size:25px;margin-bottom:12px}
+
+.features h3{font-size:13px;margin-bottom:6px}
+
+.features p{font-size:11px;color:#999}
+
+.heading{margin-bottom:30px}
+
+h2{font-size:clamp(30px,4vw,42px);line-height:1.15;letter-spacing:-1.5px;margin-bottom:12px}
+
+.heading p{font-size:13px;color:#999;max-width:530px}
+
+.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+
+.card{padding:22px 17px;border:1px solid #303030;border-radius:8px;background:linear-gradient(145deg,#151515,#090909);display:flex;flex-direction:column;transition:.2s}
+
+.card:hover{border-color:#888;transform:translateY(-3px)}
+
+.product-icon{height:48px;width:48px;display:grid;place-items:center;border:1px solid #666;border-radius:8px;font-size:20px;font-weight:bold;margin-bottom:18px}
+
+.card h3{font-size:15px;margin-bottom:8px}
+
+.card p{font-size:11px;color:#aaa;margin-bottom:14px}
+
+.card ul,.plan ul{list-style:none;font-size:11px;color:#ccc;margin-bottom:20px}
+
+.card li,.plan li{margin:8px 0}
+
+.card li:before,.plan li:before{content:"✓ ";color:white}
+
+.price{font-size:25px;font-weight:bold;margin-top:auto;margin-bottom:15px}
+
+.price small{font-size:10px;color:#888;font-weight:normal}
+
+.card .btn,.plan .btn{display:block;text-align:center}
+
+.pricing{background:linear-gradient(120deg,#151515,#080808);border-block:1px solid #292929}
+
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:30px}
+
+.plan{padding:27px;border:1px solid #383838;border-radius:8px;background:#0b0b0b;display:flex;flex-direction:column}
+
+.plan.popular{border-color:#fff}
+
+.tag{font-size:9px;letter-spacing:1px;background:#fff;color:#000;padding:5px 9px;border-radius:15px;display:inline-block;align-self:flex-start;margin-bottom:12px}
+
+.plan h3{font-size:18px}
+
+.plan p{font-size:12px;color:#999}
+
+.plan .price{font-size:32px;margin:12px 0}
+
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:25px}
+
+.review{border:1px solid #303030;border-radius:8px;padding:23px;background:#0d0d0d}
+
+.review strong{font-size:13px}
+
+.review p{font-size:12px;color:#aaa;margin-top:12px}
+
+.review small{font-size:9px;color:#777}
+
+.faq-layout{display:grid;grid-template-columns:1fr 1.3fr;gap:55px}
+
+details{border-bottom:1px solid #303030;padding:18px 0}
+
+details:first-child{border-top:1px solid #303030}
+
+summary{font-size:13px;font-weight:bold;cursor:pointer}
+
+details p{font-size:12px;color:#aaa;padding-top:12px}
+
+.cta{text-align:center;background:radial-gradient(ellipse at center,#222,#080808 70%);border-block:1px solid #292929}
+
+.cta p{font-size:13px;color:#aaa;margin:15px 0 25px}
+
+footer{padding:30px 7%;font-size:11px;color:#888}
+
+.footer-top,.footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+
+.footer-top{padding-bottom:20px;border-bottom:1px solid #292929}
+
+.footer-links{display:flex;gap:18px;flex-wrap:wrap}
+
+.footer-bottom{padding-top:18px}
+
+@media(max-width:950px){nav{gap:12px}.features{grid-template-columns:repeat(3,1fr)}.products{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+@media(max-width:650px){header{padding:0 5%;height:65px}header nav{display:none}header .btn{padding:9px;font-size:10px}section{padding:55px 5%}.hero{min-height:520px;padding:65px 5%}.hero:after{right:-25%;opacity:.6}h1{letter-spacing:-2px}.stats{gap:18px}.stats strong{font-size:19px}.features{grid-template-columns:repeat(2,1fr);padding:30px 5%}.products,.plans,.reviews{grid-template-columns:1fr}.faq-layout{grid-template-columns:1fr;gap:20px}.footer-top,.footer-bottom{align-items:flex-start;flex-direction:column}}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<a href="#home" class="logo">XS<span>TWEAKS</span></a>
+
+<nav>
+
+<a href="#home">Home</a>
+
+<a href="#products">Products</a>
+
+<a href="#features">Features</a>
+
+<a href="#pricing">Pricing</a>
+
+<a href="#faq">FAQ</a>
+
+</nav>
+
+<a class="btn white" href="https://discord.gg/8yPFv9appf" target="_blank" rel="noopener">Join Discord ↗</a>
+
+</header>
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="eyebrow">XSTWEAKS PERFORMANCE SUITE</div>
+
+<h1>Optimize Beyond<br><span>Limits.</span></h1>
+
+<p>Discover PC optimization, Fortnite performance guides, and system tools designed for gamers who want to get more from their setup.</p>
+
+<div class="actions">
+
+<a class="btn white" href="#products">Explore Products →</a>
+
+<a class="btn" href="https://discord.gg/8yPFv9appf" target="_blank" rel="noopener">Join Discord</a>
+
+</div>
+
+<div class="stats">
+
+<div><strong>PC</strong><small>Performance tools</small></div>
+
+<div><strong>FPS</strong><small>Gaming focused</small></div>
+
+<div><strong>XS</strong><small>Built for gamers</small></div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="features" id="features">
+
+<div><div class="feature-icon">◴</div><h3>FPS Performance</h3><p>Explore ways to improve game smoothness.</p></div>
+
+<div><div class="feature-icon">⌁</div><h3>Network Insights</h3><p>Learn to troubleshoot connection issues.</p></div>
+
+<div><div class="feature-icon">⚙</div><h3>PC Optimization</h3><p>Understand Windows and system settings.</p></div>
+
+<div><div class="feature-icon">↗</div><h3>Simple Setup</h3><p>Clear guides for your gaming setup.</p></div>
+
+<div><div class="feature-icon">◇</div><h3>Safety First</h3><p>Understand changes before applying them.</p></div>
+
+</section>
+
+<section id="products">
+
+<div class="heading">
+
+<div class="eyebrow">OUR PRODUCTS</div>
+
+<h2>Professional Tools for<br>Real Performance.</h2>
+
+<p>Find the right starting point for your setup. Contact us on Discord for product availability and details.</p>
+
+</div>
+
+<div class="products">
+
+<article class="card">
+
+<div class="product-icon">XS</div><h3>XS Optimizer</h3>
+
+<p>A guided starting point for reviewing PC settings and optimization options.</p>
+
+<ul><li>System settings guide</li><li>Performance checklist</li><li>Setup documentation</li></ul>
+
+<div class="price">$24.99 <small>sample price</small></div>
+
+<a class="btn" href="https://discord.gg/8yPFv9appf">Learn More →</a>
+
+</article>
+
+<article class="card">
+
+<div class="product-icon">F</div><h3>Fortnite Performance</h3>
+
+<p>A focused guide for Fortnite settings and PC configuration.</p>
+
+<ul><li>Game settings guide</li><li>Input and display tips</li><li>Testing checklist</li></ul>
+
+<div class="price">$19.99 <small>sample price</small></div>
+
+<a class="btn" href="https://discord.gg/8yPFv9appf">Learn More →</a>
+
+</article>
+
+<article class="card">
+
+<div class="product-icon">⌁</div><h3>Connection Guide</h3>
+
+<p>Learn to troubleshoot latency, packet loss, and network problems.</p>
+
+<ul><li>Connection checklist</li><li>Basic diagnostics</li><li>Network guidance</li></ul>
+
+<div class="price">$14.99 <small>sample price</small></div>
+
+<a class="btn" href="https://discord.gg/8yPFv9appf">Learn More →</a>
+
+</article>
+
+<article class="card">
+
+<div class="product-icon">◴</div><h3>FPS Utility</h3>
+
+<p>A planned utility concept for tracking performance and setup notes.</p>
+
+<ul><li>Performance tools</li><li>Setup notes</li><li>Future updates</li></ul>
+
+<div class="price">$12.99 <small>planned</small></div>
+
+<a class="btn" href="https://discord.gg/8yPFv9appf">Get Updates →</a>
+
+</article>
+
+</div>
+
+<p style="color:#777;font-size:10px;margin-top:18px">Prices are examples and must be confirmed before sale. Results vary by hardware and network conditions.</p>
+
+</section>
+
+<section class="pricing" id="pricing">
+
+<div class="heading">
+
+<div class="eyebrow">PRICING</div>
+
+<h2>Simple Plans.<br>Clear Choices.</h2>
+
+<p>Choose a starting point that fits your setup.</p>
+
+</div>
+
+<div class="plans">
+
+<div class="plan"><h3>Starter</h3><p>For a guided starting point.</p><div class="price">$12.99</div><ul><li>Basic PC checklist</li><li>Getting-started guide</li><li>Community access</li></ul><a class="btn" href="https://discord.gg/8yPFv9appf">Get Started</a></div>
+
+<div class="plan popular"><span class="tag">POPULAR</span><h3>Pro</h3><p>For players wanting more guidance.</p><div class="price">$24.99</div><ul><li>PC optimization guide</li><li>Fortnite setup checklist</li><li>Product support</li></ul><a class="btn white" href="https://discord.gg/8yPFv9appf">Choose Pro</a></div>
+
+<div class="plan"><h3>Ultimate</h3><p>For a broader toolkit.</p><div class="price">$39.99</div><ul><li>All listed guides</li><li>Advanced documentation</li><li>Support access</li></ul><a class="btn" href="https://discord.gg/8yPFv9appf">Get Ultimate</a></div>
+
+</div>
+
+<p style="font-size:10px;color:#777;margin-top:20px">Plans and prices are placeholders. Confirm the actual product inclusions before publishing them for sale.</p>
+
+</section>
+
+<section>
+
+<div class="heading">
+
+<div class="eyebrow">COMMUNITY FEEDBACK</div>
+
+<h2>Built for Gamers.</h2>
+
+<p>Replace these placeholders with genuine customer reviews after receiving permission to publish them.</p>
+
+</div>
+
+<div class="reviews">
+
+<div class="review"><strong>Customer Feedback</strong><p>Real customer feedback will be displayed here.</p><small>REVIEW PLACEHOLDER</small></div>
+
+<div class="review"><strong>Community Experience</strong><p>Share honest experiences and tested system configurations.</p><small>REVIEW PLACEHOLDER</small></div>
+
+<div class="review"><strong>Transparent Results</strong><p>We value clear information over exaggerated performance promises.</p><small>OUR APPROACH</small></div>
+
+</div>
+
+</section>
+
+<section id="faq">
+
+<div class="faq-layout">
+
+<div class="heading">
+
+<div class="eyebrow">FAQ</div>
+
+<h2>Questions?<br>We've Got Answers.</h2>
+
+<p>Need assistance? Our Discord is the place to start.</p>
+
+<br><a class="btn white" href="https://discord.gg/8yPFv9appf">Visit Discord ↗</a>
+
+</div>
+
+<div>
+
+<details><summary>Will XSTweaks work on my PC?</summary><p>Compatibility depends on your Windows version, hardware, and product. Check the requirements before making changes.</p></details>
+
+<details><summary>Can you guarantee more FPS or lower ping?</summary><p>No. Results vary based on hardware, game settings, server location, routing, and network conditions.</p></details>
+
+<details><summary>Are optimization changes safe?</summary><p>Review changes before applying them. Keep backups where appropriate, avoid unknown scripts, and do not disable essential security protections for performance.</p></details>
+
+<details><summary>How do I get support?</summary><p>Join our Discord and use the available support channels or ticket system.</p></details>
+
+<details><summary>How do I purchase a product?</summary><p>Contact us on Discord to confirm current availability, pricing, payment methods, and delivery details before paying.</p></details>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<div class="eyebrow">YOUR NEXT SESSION STARTS HERE</div>
+
+<h2>Ready to Tune Your Setup?</h2>
+
+<p>Join the community for updates, support, and PC performance discussions.</p>
+
+<a class="btn white" href="https://discord.gg/8yPFv9appf" target="_blank" rel="noopener">Join XSTweaks Discord ↗</a>
+
+</section>
+
+<footer>
+
+<div class="footer-top">
+
+<a class="logo" href="#home">XS<span>TWEAKS</span></a>
+
+<div class="footer-links">
+
+<a href="#products">Products</a>
+
+<a href="#pricing">Pricing</a>
+
+<a href="#faq">FAQ</a>
+
+<a href="https://discord.gg/8yPFv9appf">Discord</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<span>© <span id="year"></span> XSTweaks. All rights reserved.</span>
+
+<span>Independent brand. Not affiliated with Epic Games.</span>
+
+</div>
+
+</footer>
+
+<script>
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+</script>
+
+</body>
+
+</html>
